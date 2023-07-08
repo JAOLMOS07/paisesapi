@@ -1,0 +1,107 @@
+.pais-item {
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 10px 0px;
+    border: 2px solid rgb(177, 206, 241);
+    padding: 10px;
+    margin: 10px;
+    background-color: #f5f5f599;
+}
+
+.bandera {
+    width: 25%;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.info h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.info p {
+    margin: 0;
+}
+
+.btn-more-info {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn-more-info:hover {
+    background-color: #0056b3;
+}
+
+.additional-info {
+    background-color: #bbe6ff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    /* Alinea la información adicional a la derecha */
+    width: 400px;
+    /* Ajusta el ancho según tus necesidades */
+}
+
+.additional-info p {
+    margin-bottom: 5px;
+}
+
+.additional-info ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.additional-info li {
+    margin-bottom: 5px;
+}
+
+.google-map-link {
+    text-decoration: none;
+    /* Quitar la línea de subrayado */
+    color: #007bff;
+    /* Establecer el color deseado */
+}
+
+.google-map-link:hover {
+    text-decoration: underline;
+    /* Agregar línea de subrayado al pasar el cursor */
+    color: #0056b3;
+    /* Establecer el color de resaltado al pasar el cursor */
+}
+
+.borders {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.btn-borders {
+    margin: auto;
+    background-color: #84b9ff;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90%;
+    transition: transform 0.2s ease;
+}
+
+.btn-borders:hover {
+    transform: scaleX(1.1);
+}

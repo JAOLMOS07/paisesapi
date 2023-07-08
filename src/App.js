@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Busqueda from './components/busqueda';
+import ListaPaises from './components/listaPaises';
 
 function App() {
+  const [buscado, setBuscado] = useState('');
+
+  const handleBuscarDatos = (pais) => {
+    setBuscado(pais);
+  };
+
+  const paises = buscado.split(',').map((pais, index) => (
+    <ListaPaises key={index} buscado={pais.trim()} />
+  ));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Busqueda onBuscar={handleBuscarDatos} />
+      {paises}
     </div>
   );
 }
