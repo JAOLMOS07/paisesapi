@@ -12,6 +12,7 @@ const ListaPaises = (props) =>{
         .get('https://restcountries.com/v3.1/translation/'+ props.buscado+'?fields=name,translations,population,flags,capital,languages,maps' )
         .then(response => {
             console.log('promise fulfilled');
+
             const countryData = response.data.map((country) => ({
                 name: country.translations.spa.common,
                 population: country.population,
@@ -39,7 +40,7 @@ const ListaPaises = (props) =>{
     if(props.buscado === ''){
         return null;
 
-    }else if(state == 0)
+    }else if(state === 0)
     {
         return(<div>No se encontró información del pais buscado.</div>)
 
@@ -58,7 +59,7 @@ const ListaPaises = (props) =>{
         </ul>
         )
     }else{
-        return(<div>Debe especificar mas su busqueda</div>)
+        return(<div>Debe especificar más su busqueda</div>)
     }
 
 

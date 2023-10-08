@@ -1,15 +1,14 @@
 import {React,useState} from 'react';
 import './PaisItem.css';
 const PaisItem = (props) => {
+  
   const [showMoreInfo, setShowMoreInfo] = useState(true);
-  const [showFronteras, setShowFronteras] = useState(false);
+
   const formattedPopulation = props.pais.population.toLocaleString();
   const handleMoreInfoClick = () => {
     setShowMoreInfo(!showMoreInfo);
   };
-  const handleBordersClick = () => {
-    setShowFronteras(!showFronteras);
-  };
+
   return (
     <div className="pais-item">
       <img className="bandera" src={props.pais.flag.png} alt={props.pais.flag.alt} />
@@ -35,11 +34,7 @@ const PaisItem = (props) => {
               >
                 Ver en Google Maps
               </a>
-              <div className="borders">
-              <button className="btn-borders" onClick={handleBordersClick}>
-              {showFronteras ? ('VER FRONTERAS'):('OCULTAR FRONTERAS')}
-              </button>
-              </div>
+              
             </div>
 
             
