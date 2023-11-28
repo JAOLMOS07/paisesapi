@@ -21,7 +21,7 @@ function App() {
         {paises}
       </div>
       <footer>
-        Hecho por  Jhoger Olmos y Juliana Torres
+        Hecho por  Jhoger Olmos
       </footer>
     </>
   );
